@@ -1,5 +1,7 @@
 # sqlite-simple-sample
 
+sample of [sqlite-simple](http://hackage.haskell.org/package/sqlite-simple) package
+
 # Requirements
 
 - haskell stack
