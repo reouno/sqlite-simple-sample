@@ -1,5 +1,10 @@
 # sqlite-simple-sample
 
+# Requirements
+
+- haskell stack
+- sqlite3
+
 # Install and run
 
 ```
