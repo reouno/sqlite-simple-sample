@@ -4,5 +4,6 @@ import Lib
 
 main :: IO ()
 main =
-    testSQLite
+    testCreate
+    >> testSQLite
     >> testSQLite2

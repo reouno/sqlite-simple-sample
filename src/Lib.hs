@@ -1,7 +1,8 @@
 {-# LANGUAGE OverloadedStrings #-}
 
 module Lib
-    ( testSQLite
+    ( testCreate
+    , testSQLite
     , testSQLite2
     ) where
 
@@ -54,6 +55,12 @@ testSQLite2 = do
     mapM_ print r3
     close conn
 
+testCreate :: IO ()
+testCreate = do
+    conn <- open "test.db"
+    putStrLn "create table \"sample\""
+    execute_ conn "CREATE TABLE IF NOT EXISTS sample (id INTEGER PRIMARY KEY AUTOINCREMENT, str TEXT)"
+    close conn
 
 insert :: Connection -> String -> String -> IO ()
 insert conn table str =
